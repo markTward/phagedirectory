@@ -1,0 +1,74 @@
+<h1 id="parse-csv-with-javascript">Parse CSV with JavaScript</h1>
+
+<p>Papa Parse is the <a href="http://jsperf.com/javascript-csv-parsers/4">fastest</a> in-browser CSV (or delimited text) parser for JavaScript. It is reliable and correct according to <a href="https://tools.ietf.org/html/rfc4180">RFC 4180</a>, and it comes with these features:</p>
+
+<ul>
+  <li>Easy to use</li>
+  <li>Parse CSV files directly (local or over the network)</li>
+  <li>Fast mode (<a href="http://jsperf.com/javascript-csv-parsers/3">is really fast</a>)</li>
+  <li>Stream large files (even via HTTP)</li>
+  <li>Reverse parsing (converts JSON to CSV)</li>
+  <li>Auto-detect delimiter</li>
+  <li>Worker threads to keep your web page reactive</li>
+  <li>Header row support</li>
+  <li>Pause, resume, abort</li>
+  <li>Can convert numbers and booleans to their types</li>
+  <li>Optional jQuery integration to get files from <code>&lt;input type="file"&gt;</code> elements</li>
+</ul>
+
+<p>Papa Parse has <strong>no dependencies</strong> - not even jQuery.</p>
+
+<h2 id="homepage--demo">Homepage &amp; Demo</h2>
+
+<ul>
+  <li><a href="http://papaparse.com">Homepage</a></li>
+  <li><a href="http://papaparse.com/demo">Demo</a></li>
+</ul>
+
+<p>To learn how to use Papa Parse:</p>
+
+<ul>
+  <li><a href="http://papaparse.com/docs">Documentation</a></li>
+</ul>
+
+<h2 id="papa-parse-for-node">Papa Parse for Node</h2>
+
+<p>Papa Parse can parse a <a href="https://nodejs.org/api/stream.html#stream_readable_streams">Readable Stream</a> instead of a <a href="https://www.w3.org/TR/FileAPI/">File</a> when used in Node.js environments (in addition to plain strings). In this mode, <code>encoding</code> must, if specified, be a Node-supported character encoding. The <code>Papa.LocalChunkSize</code>, <code>Papa.RemoteChunkSize</code> , <code>download</code>, <code>withCredentials</code> and <code>worker</code> config options are unavailable.</p>
+
+<p>Additionally, <a href="https://github.com/Rich-Harris">Rich Harris</a> forked this project to make <strong><a href="https://github.com/Rich-Harris/BabyParse">Baby Parse</a></strong> which runs in Node.js environments.</p>
+
+<p><code>bash
+$ npm install babyparse
+</code></p>
+
+<p><a href="https://www.npmjs.org/package/babyparse">Baby Parse on npm registry</a></p>
+
+<p>Use it just like Papa Parse. However:</p>
+
+<ul>
+  <li>Files are not supported; strings only (you can use Node's file facilities to load file contents yourself)</li>
+  <li>Some config options are unavailable:
+    <ul>
+      <li>worker</li>
+      <li>download (you can use Node's network facilities to download files yourself)</li>
+      <li>encoding</li>
+      <li>chunk</li>
+    </ul>
+  </li>
+</ul>
+
+<p>Otherwise, Baby Parse has nearly all the same functionality as Papa Parse 4.0, including the <code>unparse()</code> utility.</p>
+
+<h2 id="get-started">Get Started</h2>
+
+<p>Use <a href="https://github.com/mholt/PapaParse/blob/master/papaparse.min.js">papaparse.min.js</a> for production.</p>
+
+<p>For usage instructions, see the <a href="http://papaparse.com">homepage</a> and, for more detail, the <a href="http://papaparse.com/docs">documentation</a>.</p>
+
+<h2 id="tests">Tests</h2>
+
+<p>Papa Parse is under test. Download this repository, run <code>npm install</code>, then <code>npm test</code> to run the tests in your browser.</p>
+
+<h2 id="contributing">Contributing</h2>
+
+<p>To discuss a new feature or ask a question, open an issue. To fix a bug, submit a pull request to be credited with the <a href="https://github.com/mholt/PapaParse/graphs/contributors">contributors</a>! Remember, a pull request, <em>with test</em>, is best. You may also discuss on Twitter with <a href="https://twitter.com/search?q=%23PapaParse&amp;src=typd&amp;f=realtime">#PapaParse</a> or directly to me, <a href="https://twitter.com/mholt6">@mholt6</a>.</p>
